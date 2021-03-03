@@ -16,6 +16,7 @@
 		447BCFC525ED3BAD00AF55B1 /* drawingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BCFC425ED3BAD00AF55B1 /* drawingTests.swift */; };
 		447BCFD025ED3BAD00AF55B1 /* drawingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BCFCF25ED3BAD00AF55B1 /* drawingUITests.swift */; };
 		447BCFE925ED3C5600AF55B1 /* AlienView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BCFE825ED3C5600AF55B1 /* AlienView.swift */; };
+		447BCFF425EFE42400AF55B1 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BCFF325EFE42400AF55B1 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		447BCFCF25ED3BAD00AF55B1 /* drawingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawingUITests.swift; sourceTree = "<group>"; };
 		447BCFD125ED3BAD00AF55B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447BCFE825ED3C5600AF55B1 /* AlienView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienView.swift; sourceTree = "<group>"; };
+		447BCFF325EFE42400AF55B1 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				447BCFB125ED3BAB00AF55B1 /* ViewController.swift */,
 				447BCFB325ED3BAB00AF55B1 /* Main.storyboard */,
 				447BCFE825ED3C5600AF55B1 /* AlienView.swift */,
+				447BCFF325EFE42400AF55B1 /* GameView.swift */,
 				447BCFB625ED3BAD00AF55B1 /* Assets.xcassets */,
 				447BCFB825ED3BAD00AF55B1 /* LaunchScreen.storyboard */,
 				447BCFBB25ED3BAD00AF55B1 /* Info.plist */,
@@ -265,6 +268,7 @@
 				447BCFAE25ED3BAB00AF55B1 /* AppDelegate.swift in Sources */,
 				447BCFE925ED3C5600AF55B1 /* AlienView.swift in Sources */,
 				447BCFB025ED3BAB00AF55B1 /* SceneDelegate.swift in Sources */,
+				447BCFF425EFE42400AF55B1 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

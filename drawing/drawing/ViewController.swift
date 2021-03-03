@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var alienView: AlienView!
+    @IBOutlet weak var gameView: GameView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +16,14 @@ class ViewController: UIViewController {
         //when screen needs to refresh, calls this selector
         let displayLink = CADisplayLink(target: self, selector: #selector(update))
         displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
+        
+        
     }
     
     @objc func update(){
         //print(update())
         print("update")
-        alienView.update()
+        gameView.update()
     }
 
 
