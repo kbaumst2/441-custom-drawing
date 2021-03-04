@@ -21,14 +21,15 @@ class GameView: UIView{
     var speed = 3
     var level = 0
     var updateLevel = false
+    var reset = false
     @IBOutlet weak var directionsLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
-
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
+    
 
     override func draw(_ rect: CGRect) {
-        
-        
-        
         //line at a random y within bounds of UIView
         linex = Int(self.bounds.maxX) - 100
      //   var liney = Int.random(in: Int(self.bounds.minY) + 40 ... Int(self.bounds.maxY) - 40)
@@ -51,11 +52,17 @@ class GameView: UIView{
         
     }
     
+    @IBAction func clickResetButton(sender: UIButton){
+        count = 0
+        level = 0
+        bally = 20
+    }
+    
     @objc func update(){  //do collision detection here
         print("updating")
         print("ball move: " + String(ballMove))
         if(count > 2){
-            print("reset")
+            print("reset ball")
             bally = 20
             count = 0
             if(updateLevel == true){
@@ -86,7 +93,12 @@ class GameView: UIView{
             print("moving")
             directionsLabel.text = ""
             bally += speed + level
+            if(bally > Int(self.bounds.maxY)){
+                count = 2
+            }
         }
+        
+        
         setNeedsDisplay()  //calls draw function (like a flag)
     }
     
@@ -97,22 +109,7 @@ class GameView: UIView{
             print("in for loop")
             count += 1
             finaly = bally
-            random = Int.random(in: Int(self.bounds.minY) + 70 ... Int(self.bounds.maxY) - 40)
-//            if(count == 2){
-//                finaly = Int(point.y)
-//            }
-            
-    //        bally = 200
-//            if(bally == 20){
-//                ballMove = true
-//            }
-//            if(ballMove == false){
-//                print("changing to true")
-//                ballMove = true
-//            }
-//            if(ballMove == true){
-//                ballMove = false
-//            }
+            random = Int.random(in: Int(self.bounds.minY) + 70 ... Int(self.bounds.maxY) - 70)
 //            shapex = Int(point.x)
 //            shapey = Int(point.y)
             
