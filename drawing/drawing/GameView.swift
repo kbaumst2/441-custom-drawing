@@ -32,8 +32,6 @@ class GameView: UIView{
     override func draw(_ rect: CGRect) {
         //line at a random y within bounds of UIView
         linex = Int(self.bounds.maxX) - 100
-     //   var liney = Int.random(in: Int(self.bounds.minY) + 40 ... Int(self.bounds.maxY) - 40)
-//        liney = 300
         let drect =  CGRect(x: linex , y: liney, width: 100, height: 10)
         let bpath: UIBezierPath = UIBezierPath(rect: drect)
         UIColor.yellow.set()
@@ -60,7 +58,6 @@ class GameView: UIView{
     
     @objc func update(){  //do collision detection here
         print("updating")
-        print("ball move: " + String(ballMove))
         if(count > 2){
             print("reset ball")
             bally = 20
@@ -77,11 +74,8 @@ class GameView: UIView{
             
         }
         if(count == 2 ) {
-//            directionsLabel.text = "This will hold results"
-//            directionsLabel.text = String(finaly) + " ; " + String(liney)
             if(finaly < liney + 15 && finaly > liney - 15){
                 directionsLabel.text = "Congratulations! You are moving onto the next level \nClick to try again"
-                print("SUCCESS")
                 updateLevel = true
                 levelLabel.text = "Level: " + String(level+1)
             }
@@ -90,7 +84,6 @@ class GameView: UIView{
             }
         }
         else if(count % 2 == 1){
-            print("moving")
             directionsLabel.text = ""
             bally += speed + level
             if(bally > Int(self.bounds.maxY)){
@@ -106,7 +99,6 @@ class GameView: UIView{
         print("touched")
         for t in touches {
             let point = t.location(in: self)
-            print("in for loop")
             count += 1
             finaly = bally
             random = Int.random(in: Int(self.bounds.minY) + 70 ... Int(self.bounds.maxY) - 70)
